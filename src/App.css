@@ -40,7 +40,7 @@
 }
 
 .slide-in {
-  animation: slideInFromLeft 0.6s ease-out forwards;
+  animation: slideInFromLeft 0.5s ease-out forwards;
 }
 
 @keyframes rightSlideIn {
@@ -55,5 +55,36 @@
 }
 
 .right-slide-in {
-  animation: slideInFromRight 0.6s ease-out forwards;
+  animation: slideInFromRight 0.5s ease-out forwards;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #a29bfe #1f2937;
+}
+
+/* Custom scrollbar styling */
+/* Width and color of the scrollbar itself */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 8px; /* Height of the horizontal scrollbar */
+}
+
+/* Styling the track (part the scrollbar sits within) */
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Light grey track */
+  border-radius: 10px;
+}
+
+/* Styling the handle (draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background-color: #a29bfe; /* Darker grey scrollbar handle */
+  border-radius: 10px;
+  border: 2px solid #f0f0f0; /* Creates padding around scroll thumb */
+}
+
+/* Optional: Handle hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background: #6c5ce7; /* Color when hovering over the scrollbar handle */
 }

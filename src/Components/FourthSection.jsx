@@ -40,9 +40,9 @@ function FourthSection({ refProject2, isIntersectingProject2 }) {
           {/* Technologies Used Section */}
           <div className="mt-8">
             <h4 className="text-2xl font-bold mb-4 text-left tracking-widest">
-              Technologies Used
+              Technologies
             </h4>
-            <div className="flex flex-wrap gap-4 ml-12 text-xl font-medium text-left tracking-widest">
+            <div className="flex flex-wrap gap-4 ml-12 text-lg font-medium text-left tracking-widest">
               <div className="flex items-center">
                 <span className="inline-block w-2 h-2 mr-2 rounded-full bg-blue-500 shadow-lg shadow-blue-500/50"></span>
                 <span>JavaScript</span>

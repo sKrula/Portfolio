@@ -1,4 +1,4 @@
-import tripixPhoto from "../assets/Tripix.jpg";
+import tripixPhoto from "../assets/tripix2.png";
 import "../App.css";
 import { useEffect } from "react";
 
@@ -15,11 +15,12 @@ function ThirdSection({ refProject1, isIntersectingProject1 }) {
     }
   }, [isIntersectingProject1]);
   return (
-    <div
-      className={`w-full py-8 rounded-3xl text-center mb-2 mx-4 sm:mx-8 ${
+    <section
+      className={`w-full py-8 rounded-3xl text-center transition-opacity duration-500 mb-2 mx-4 sm:mx-8 ${
         isIntersectingProject1 ? "" : "opacity-0"
       }`}
       ref={refProject1}
+      id="projects"
     >
       <h2 className="text-5xl font-bold mb-8 uppercase tracking-widest">
         Projects
@@ -44,9 +45,9 @@ function ThirdSection({ refProject1, isIntersectingProject1 }) {
           {/* Technologies Used Section */}
           <div className="mt-8">
             <h4 className="text-2xl font-bold mb-4 text-left tracking-widest">
-              Technologies Used
+              Technologies
             </h4>
-            <div className="flex flex-wrap gap-4 ml-12 text-xl font-medium text-left tracking-widest">
+            <div className="flex flex-wrap gap-4 ml-12 text-lg font-medium text-left tracking-widest">
               <div className="flex items-center">
                 <span className="inline-block w-2 h-2 mr-2 rounded-full bg-blue-500 shadow-lg shadow-blue-500/50"></span>
                 <span>React</span>
@@ -69,12 +70,15 @@ function ThirdSection({ refProject1, isIntersectingProject1 }) {
               </div>
             </div>
           </div>
-          <button className="flex font-bold bg-violet-600 p-2  mt-12 px-10 rounded-full hover:bg-violet-800 ">
+          <button
+            className="flex font-bold bg-violet-600 p-2 mt-12 px-10 rounded-full hover:bg-violet-800"
+            onClick={() => window.open("https://tripix.matasgr.com", "_blank")}
+          >
             Live Demo
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

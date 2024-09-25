@@ -18,8 +18,8 @@ const FirstSection = ({ typedText }) => {
   }, []);
 
   return (
-    <div
-      id="main-content"
+    <section
+      id="home"
       className="flex flex-col items-center justify-center min-h-screen relative"
     >
       <p className="text-xl mr-auto">Hello 🖐, I'm</p>
@@ -27,11 +27,13 @@ const FirstSection = ({ typedText }) => {
       <p className="text-md mr-auto font-bold text-violet-400 tracking-wider uppercase sm:text-xl">
         Student + <span className="text-white">{typedText}</span>
       </p>
-      <button className="mr-auto font-bold tracking-wider bg-violet-600 p-3 mt-5 px-10 rounded-full hover:bg-violet-800">
+      <a
+        className="mr-auto font-bold tracking-wider bg-violet-600 p-3 mt-5 px-10 rounded-full hover:bg-violet-800"
+        href="#contacts"
+      >
         Contact me
-      </button>
+      </a>
 
-      {/* Scroll Down Arrow */}
       {isArrowVisible && (
         <div className="absolute bottom-10 flex flex-col items-center">
           <img
@@ -41,7 +43,7 @@ const FirstSection = ({ typedText }) => {
           />
         </div>
       )}
-    </div>
+    </section>
   );
 };
 

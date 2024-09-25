@@ -4,6 +4,9 @@ import FirstSection from "./Components/FirstSection";
 import SecondSection from "./Components/SecondSection";
 import ThirdSection from "./Components/ThirdSection";
 import FourthSection from "./Components/FourthSection";
+import ContactsSections from "./Components/ContactsSections";
+
+import "./App.css";
 
 function useTypewriter(
   words,
@@ -65,8 +68,7 @@ function App() {
   };
 
   const handleScroll = () => {
-    const mainContentHeight =
-      document.getElementById("main-content").clientHeight;
+    const mainContentHeight = document.getElementById("home").clientHeight;
     const scrollPosition = window.scrollY;
     setShowHeader(scrollPosition >= mainContentHeight);
   };
@@ -159,6 +161,7 @@ function App() {
         refProject2={refProject2}
         isIntersectingProject2={isIntersectingProject2}
       />
+      <ContactsSections />
     </div>
   );
 }
